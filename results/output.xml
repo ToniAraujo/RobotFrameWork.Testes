@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-22T18:59:08.264767" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFrameWork.Selenium.Web.Tests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests">
+<suite id="s1-s1" name="Tests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests">
+<suite id="s1-s1-s1" name="HomeTests" source="C:\Users\rodri\Documents\RobotFrameWork.Selenium.Web.Tests\Tests\HomeTests.robot">
+<test id="s1-s1-s1-t1" name="CT03: Clicar no botão Woman" line="22">
+<kw name="Set Test Environment" owner="Config" type="SETUP">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Get Variable Value" owner="BuiltIn">
+<arg>${BASE_URL_PROD}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<status status="PASS" start="2024-02-22T18:59:08.798872" elapsed="0.000000"/>
+</kw>
+<msg time="2024-02-22T18:59:08.798872" level="INFO">${base_url} = http://www.automationpractice.pl</msg>
+<var>${base_url}</var>
+<arg>'${environment}' == 'prod'</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_PROD}</arg>
+<arg>ELSE IF</arg>
+<arg>'${environment}' == 'qa'</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_QA}</arg>
+<arg>ELSE</arg>
+<arg>Get Variable Value</arg>
+<arg>${BASE_URL_DEV}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-02-22T18:59:08.798872" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-22T18:59:08.799951" level="INFO">Opening browser 'headlesschrome' to base url 'http://www.automationpractice.pl'.</msg>
+<arg>${base_url}</arg>
+<arg>headlesschrome</arg>
+<arg>options=add_argument("--no-sandbox")</arg>
+<arg>options=add_argument("--disable-dev-shm-usage")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-22T18:59:08.799951" elapsed="7.767386"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-22T18:59:16.568346" elapsed="0.123938"/>
+</kw>
+<arg>chrome</arg>
+<arg>prod</arg>
+<status status="PASS" start="2024-02-22T18:59:08.797610" elapsed="7.894674"/>
+</kw>
+<kw name="E clico em Women no menu" owner="HomeStep">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-22T18:59:16.693302" level="INFO">Clicking element '//ul[@class="sf-menu clearfix menu-content sf-js-enabled sf-arrows"]//a[@title="Women"]'.</msg>
+<arg>${WOMAN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-22T18:59:16.693302" elapsed="1.863026"/>
+</kw>
+<status status="PASS" start="2024-02-22T18:59:16.692284" elapsed="1.865098"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-02-22T18:59:18.557382" elapsed="6.229121"/>
+</kw>
+<tag>CT03</tag>
+<status status="PASS" start="2024-02-22T18:59:08.796605" elapsed="15.990979"/>
+</test>
+<status status="PASS" start="2024-02-22T18:59:08.296857" elapsed="16.493643"/>
+</suite>
+<status status="PASS" start="2024-02-22T18:59:08.293708" elapsed="16.498792"/>
+</suite>
+<status status="PASS" start="2024-02-22T18:59:08.272095" elapsed="16.523405"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CT03</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RobotFrameWork.Selenium.Web.Tests">RobotFrameWork.Selenium.Web.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">RobotFrameWork.Selenium.Web.Tests.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="HomeTests">RobotFrameWork.Selenium.Web.Tests.Tests.HomeTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
